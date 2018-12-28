@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Youtube Extension</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="style.css">
+ 	<!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+	crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
+	<script src="popup.js"></script>
+</head>
+
+<body>
+	<h2 class="text-center display-4 my-4">Channels</h2>
+	<div class="container">
+		<div class="input-group mb-3">
+			<input class="form-control" type="text" placeholder="Channel Name" id="channelName" aria-label="Email" aria-describedby="basic-addon2" />
+			<script>
+				document.getElementById("channelName").onkeypress = function (e) {
+					var key = e.charCode || e.keyCode || 0;
+					if (key == 13) {
+						e.preventDefault();
+					}
+				}
+			</script>
+			<input class="btn btn-outline-secondary" type='button' value='Add'  onclick="getLyrics(document.getElementById('channelName').value)" />
+		</div>
+		<!-- <div id="loading"></div> -->
+		<!-- <div id="displayLyrics" contenteditable="false">
+
+		</div> -->
+	</div>
+</body>
+</html>
